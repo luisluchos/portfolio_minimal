@@ -1,0 +1,71 @@
+---
+import { basics } from '@cv'
+import Section from '@/components/Section.astro'
+import Linkedin from '@/icons/Linkedin.astro'
+import Github from '@/icons/Github.astro'
+
+const { name, label, location, email, phone, profiles } = basics
+const { city, region, countryCode } = location
+
+const SOCIAL_ICONS: Record<string, any> = {
+  linkedin: Linkedin,
+  github: Github
+}
+---
+
+<Section>
+  <div class='container flex flex-row gap-4 flex-wrap'>
+    <div>
+      <h1>{name}</h1>
+      <p>{label}</p>
+      <span>
+        {city}, {region}, {countryCode}
+      </span>
+      <footer>
+        {
+          email && (
+            <a
+              href={`mailto:${email}`}
+              title='Enviar un email'
+              target='_blank'
+              rel='noopener norefer'
+            >
+              {email}
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a
+              href={`mailto:${email}`}
+              title={`Llamar por teléfono al ${phone}`}
+              target='_blank'
+              rel='noopener norefer'
+            >
+              {email}
+            </a>
+          )
+        }
+        <div class='flex flex-row gap-2'>
+          {
+            profiles.map(({ network, url, username }) => {
+              const Icon = SOCIAL_ICONS[network.toLowerCase()]
+              return (
+                <a href={url} title={`Perfil de ${network}`} target='_blank' rel='noopener norefer'>
+                  <div class='  text-gray-500 rounded-full px-2 py-1 w-[40px] mr-2'>
+                    <Icon />
+                  </div>
+                </a>
+              )
+            })
+          }
+        </div>
+      </footer>
+    </div>
+    <div>
+      <figure>
+        <img src='https://via.placeholder.com/150' alt='Foto de perfil' />
+      </figure>
+    </div>
+  </div>
+</Section>

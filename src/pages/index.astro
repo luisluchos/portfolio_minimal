@@ -1,11 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
+import About from '@/components/sections/About.astro'
+import Layout from '@/layouts/Layout.astro'
+import Hero from '@/components/sections/Hero.astro'
+import Section from '@/components/Section.astro'
 ---
 
-<Layout title='protfolio'>
-  <main>
-    <h1 class="text-xl font-bold">portfolio</h1>
+<Layout title='portfolio'>
+  <main class="p-4 m-auto">
+    <Section/>
+    <Hero />
+    <About />
+    <h1 class='text-xl font-bold'>portfolio</h1>
     <p class='bg-red-200'>portfolio</p>
   </main>
 </Layout>
