@@ -112,17 +112,17 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "JS",
+      "name": "JavaScript",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Typescript",
+      "name": "TypeScript",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "PHP",
+      "name": "Php",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
@@ -147,7 +147,7 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Next JS",
+      "name": "Next",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
@@ -167,12 +167,12 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "GIT",
+      "name": "Git",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Node JS",
+      "name": "Node",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
@@ -182,12 +182,12 @@
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "MYSQL",
+      "name": "MySQL",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     },
     {
-      "name": "Mongo DB",
+      "name": "Mongodb",
       "level": "Master",
       "keywords": ["HTML", "CSS", "JavaScript"]
     }
@@ -213,11 +213,63 @@
   "projects": [
     {
       "name": "Project",
+      "isActive": true,
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
       "description": "Description...",
       "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/"
+      "url": "https://project.com/",
+      "gitHub": ""
+    },
+    {
+      "name": "Project2",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/",
+      "gitHub": ""
+    },
+    {
+      "name": "Project",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/",
+      "gitHub": ""
+    },
+    {
+      "name": "Project2",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/",
+      "gitHub": ""
+    },
+    {
+      "name": "Project",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/",
+      "gitHub": ""
+    },
+    {
+      "name": "Project2",
+      "isActive": true,
+      "startDate": "2019-01-01",
+      "endDate": "2021-01-01",
+      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
+      "highlights": ["Won award at AIHacks 2016"],
+      "url": "https://project.com/",
+      "gitHub": ""
     }
   ]
 }

@@ -4,6 +4,8 @@ import Section from '@/components/Section.astro'
 import Linkedin from '@/icons/Linkedin.astro'
 import Github from '@/icons/Github.astro'
 import Map from '@/icons/Map.astro'
+import Phone from '@/icons/Phone.astro'
+import Email from '@/icons/Email.astro'
 
 const { name, label, location, email, phone, profiles } = basics
 const { city, region, countryCode } = location
@@ -12,45 +14,59 @@ const SOCIAL_ICONS: Record<string, any> = {
   linkedin: Linkedin,
   github: Github
 }
+
+const linkedinInfo = profiles.find(({ network }) => network.toLowerCase() === 'linkedin')
+const linkedinUrl = linkedinInfo?.url
 ---
 
 <Section>
-  <div class='container flex flex-row gap-4 flex-wrap'>
-    <div class='flex flex-col gap-2 pr-12'>
-      <h1>{name}</h1>
-      <p>{label}</p>
-      <span class='flex items-center'>
-        <div class='text-gray-200 rounded-full w-[20px] mr-2'>
-          <Map />
-        </div>
-        {city}, {region}, {countryCode}
-      </span>
-      <footer class=''>
-        {
-          email && (
-            <a
-              href={`mailto:${email}`}
-              title='Enviar un email'
-              target='_blank'
-              rel='noopener norefer'
-            >
-              {email}
-            </a>
-          )
-        }
-        {
-          phone && (
-            <a
-              href={`mailto:${email}`}
-              title={`Llamar por teléfono al ${phone}`}
-              target='_blank'
-              rel='noopener norefer'
-            >
-              {email}
-            </a>
-          )
-        }
-        <div class='flex flex-row gap-2 mt-2'>
+  <div class='flex flex-row justify-between'>
+    <div class='basis-1/2'>
+      <div class=''>
+        <h1>{name}</h1>
+        <p class='text-lg'>{label}</p>
+        <span class='flex items-center text-sm'>
+          <div class='text-gray-200 rounded-full w-[20px] mr-2'>
+            <Map />
+          </div>
+          {city}, {region}, {countryCode}
+        </span>
+
+        <footer class='print text-sm'>
+          <div class='print flex flex-row'>
+            <span>{email} </span>
+            <span>{phone}</span>
+            <span>{linkedinUrl}</span>
+          </div>
+        </footer>
+
+        <footer class='no-print flex items-center gap-2'>
+          {
+            email && (
+              <a
+                class=' p-1 items-center  bg-white-200 border-solid border-2 border-gray-200  rounded-lg transition duration-700 ease-in-out hover:bg-blue-100'
+                href={`mailto:${email}`}
+                title='Enviar un email'
+                target='_blank'
+                rel='noopener norefer'
+              >
+                <Email />
+              </a>
+            )
+          }
+          {
+            phone && (
+              <a
+                class='p-1 items-center  bg-white-200 border-solid border-2 border-gray-200  rounded-lg transition duration-700 ease-in-out hover:bg-blue-100'
+                href={`tel:${phone}`}
+                title={`Llamar por teléfono al ${phone}`}
+                target='_blank'
+                rel='noopener norefer'
+              >
+                <Phone />
+              </a>
+            )
+          }
           {
             profiles.map(({ network, url, username }) => {
               const Icon = SOCIAL_ICONS[network.toLowerCase()]
@@ -69,11 +85,11 @@ const SOCIAL_ICONS: Record<string, any> = {
               )
             })
           }
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
 
-    <div>
+    <div class='basis-1/2 flex justify-end'>
       <figure>
         <img src='https://via.placeholder.com/150' alt='Foto de perfil' />
       </figure>
@@ -95,5 +111,17 @@ const SOCIAL_ICONS: Record<string, any> = {
     object-fit: cover;
     width: 128px;
     border-radius: 6px;
+  }
+  .print {
+    display: none;
+  }
+
+  @media print {
+    .print {
+      display: block;
+    }
+    .no-print {
+      display: none;
+    }
   }
 </style>
