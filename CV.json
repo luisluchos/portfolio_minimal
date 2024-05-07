@@ -212,63 +212,43 @@
   ],
   "projects": [
     {
-      "name": "Project",
+      "name": "Open Jira",
       "isActive": true,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
+      "startDate": "",
+      "endDate": "",
+      "description": "Create activities, move to different pending, done, and notify states.",
+      "highlights": ["Draggable cards", "Nextjs", "React", "Mongoose"],
+      "url": "https://github.com/luisluchos/OpenJira",
       "gitHub": ""
     },
     {
-      "name": "Project2",
+      "name": "BroadCastingLaravel",
       "isActive": true,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
+      "startDate": "",
+      "endDate": "",
+      "description": "Backend with Laravel, using laravel-echo and socket.io to broadcast events",
+      "highlights": ["Laravel", "laravel-echo", "Socket.io"],
+      "url": "https://github.com/luisluchos/OpenJira",
       "gitHub": ""
     },
     {
-      "name": "Project",
+      "name": "Calendar Notes Frontend",
       "isActive": true,
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
+      "description": "Calendar notes with react, redux, and typescript.",
+      "highlights": ["typescript, react, redux"],
+      "url": "https://github.com/luisluchos/CalendarNotes/tree/main",
       "gitHub": ""
     },
     {
-      "name": "Project2",
+      "name": "Calendar Notes Backend",
       "isActive": true,
       "startDate": "2019-01-01",
       "endDate": "2021-01-01",
-      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
-      "gitHub": ""
-    },
-    {
-      "name": "Project",
-      "isActive": true,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
-      "gitHub": ""
-    },
-    {
-      "name": "Project2",
-      "isActive": true,
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description adsad dasfsaf asfsag afdga  safag sagfadaga gadfad asfas fs...",
-      "highlights": ["Won award at AIHacks 2016"],
-      "url": "https://project.com/",
+      "description": "Calendar backend with node, Express Bcrypt, JWT, Mongoose, MongoDB.",
+      "highlights": ["node, Express Bcrypt, JWT, Mongoose, MongoDB"],
+      "url": "https://github.com/luisluchos/calendar-notes-backend",
       "gitHub": ""
     }
   ]
