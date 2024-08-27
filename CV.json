@@ -60,14 +60,52 @@
   ],
   "education": [
     {
-      "institution": "University",
+      "institution": "Meta",
+      "description": "Meta Front-End Developer",
+      "url": "https://www.coursera.org/account/accomplishments/professional-cert/X1HCGKCCNY4R?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=prof",
+      "area": "Software Development",
+      "studyType": "Bachelor",
+      "startDate": "2023",
+      "endDate": "2024"
+    },
+
+    {
+      "institution": "Neoland",
+      "description": "Software Development,Full Stack BootCamp",
       "url": "https://institution.com/",
       "area": "Software Development",
       "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL"]
+      "startDate": "2020",
+      "endDate": "2021"
+    },
+    {
+      "institution": "Google",
+      "description": "Web Development, Curso de introducción al Desarrollo web",
+      "studyType": "Online",
+      "startDate": "2020",
+      "endDate": "2020",
+      "courses": [
+        {
+          "name": "Curso de introducción al Desarrollo web",
+          "url": "https://www.google.com/",
+          "startDate": "2020",
+          "endDate": "2020"
+        }
+      ]
+    },
+    {
+      "institution": "Escuela europea de dirección de Empresa",
+      "description": "Comercio Internacional",
+      "studyType": "Master",
+      "startDate": "2014",
+      "endDate": "2015"
+    },
+    {
+      "institution": "Universidad Miguel Hernández",
+      "description": "Ciencias Empresariales",
+      "studyType": "Bachelor",
+      "startDate": "2010",
+      "endDate": "2014"
     }
   ],
   "awards": [
@@ -249,6 +287,16 @@
       "description": "Calendar backend with node, Express Bcrypt, JWT, Mongoose, MongoDB.",
       "highlights": ["node, Express Bcrypt, JWT, Mongoose, MongoDB"],
       "url": "https://github.com/luisluchos/calendar-notes-backend",
+      "gitHub": ""
+    },
+    {
+      "name": "Tierlist Drag and Drop",
+      "isActive": true,
+      "startDate": "2024-08-01",
+      "endDate": "2024-08-01",
+      "description": " Tierlist drag and drop with vanilla js.",
+      "highlights": ["Js, Html, CSS"],
+      "url": "https://github.com/luisluchos/drag-drop-tierlist",
       "gitHub": ""
     }
   ]

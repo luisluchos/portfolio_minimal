@@ -1,0 +1,41 @@
+---
+import Section from '../Section.astro'
+import { education } from '@cv'
+---
+
+<Section title='Formation'>
+  <ul class='flex flex-col gap-8'>
+    {
+      education.map(({ institution, startDate, endDate, description }) => {
+        return (
+          <li>
+            <article>
+              <header class=''>
+                <div>
+                  <h3 class='font-bold text-gray-600 mt-2'>{description}</h3>
+                  <h4 class='font-semibold text-sm mb-4 text-gray-400'>{institution}</h4>
+                </div>
+                <time>
+                  {startDate}- {endDate}
+                </time>
+              </header>
+            </article>
+          </li>
+        )
+      })
+    }
+  </ul>
+</Section>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  time {
+    color: #555;
+    font-size: 0.85rem;
+  }
+</style>

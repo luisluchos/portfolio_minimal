@@ -6,6 +6,7 @@ import Github from '@/icons/Github.astro'
 import Map from '@/icons/Map.astro'
 import Phone from '@/icons/Phone.astro'
 import Email from '@/icons/Email.astro'
+import fotProfile from '@/public/Foto_Luis.jpg'
 
 const { name, label, location, email, phone, profiles } = basics
 const { city, region, countryCode } = location
@@ -23,7 +24,7 @@ const linkedinUrl = linkedinInfo?.url
   <div class='flex flex-row justify-between'>
     <div class='basis-1/2'>
       <div class=''>
-        <h1>{name}</h1>
+        <h1 class='text-[#06f42e]'>{name}</h1>
         <p class='text-lg'>{label}</p>
         <span class='flex items-center text-sm'>
           <div class='text-gray-200 rounded-full w-[20px] mr-2'>
@@ -91,7 +92,7 @@ const linkedinUrl = linkedinInfo?.url
 
     <div class='basis-1/2 flex justify-end'>
       <figure>
-        <img src='https://via.placeholder.com/150' alt='Foto de perfil' />
+        <img src='/Foto_Luis.jpg' ' alt='Foto de perfil' />
       </figure>
     </div>
   </div>
