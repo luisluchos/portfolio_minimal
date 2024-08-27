@@ -1,9 +1,10 @@
-// tailwind.config.js
 module.exports = {
-	purge: false, // Deshabilitar PurgeCSS temporalmente
-	content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
+	content: [
+	  './src/**/*.{astro,html,js,jsx,ts,tsx,css}',  // Incluye todos los archivos relevantes
+	],
 	theme: {
 	  extend: {},
 	},
 	plugins: [],
   };
+  
