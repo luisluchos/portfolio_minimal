@@ -1,10 +1,40 @@
 ---
-const { title } = Astro.props
+const { title } = Astro.props;
+const id = title; // Usamos el título como identificador único para el h2
 ---
 
-<section class='max-w-3xl m-auto my-12'>
-  {title && <h2 class="mb-4 font-bold text-lg text-gray-900">{title}</h2>
-<div class=' mb-4 bg-gray-200 h-[4px] w-1/2 ' > </div>
-  }
+<section class="max-w-3xl m-auto my-12">
+  {title && (
+    <>
+      <h2 id={id} class="mb-4 font-bold text-lg text-gray-900" style="opacity: 0; transition: opacity 1s ease-in-out;" data-id={id}>
+        {title}
+      </h2>
+      <div class="mb-4 bg-gray-200 h-[4px] w-1/2"></div>
+    </>
+  )}
   <slot />
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Seleccionar todos los elementos h2 con el atributo data-id
+    const headers = document.querySelectorAll('[data-id]');
+
+    headers.forEach((header) => {
+      const h2 = header as HTMLElement; // Casting a HTMLElement
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            h2.style.opacity = '1'; // Cambiar opacidad a 1 cuando el elemento entra en el viewport
+          } else {
+            h2.style.opacity = '0'; // Cambiar opacidad a 0 cuando el elemento sale del viewport
+          }
+        },
+        { threshold: 0.1 } // Ajuste de umbral para considerar el 10% de visibilidad
+      );
+
+      observer.observe(h2);
+    });
+  });
+</script>
